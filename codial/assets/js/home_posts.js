@@ -41,20 +41,7 @@
             <br>
             ${ post.content }
         </p>
-        <div class="post-comments">
-                <form action="/comments/create" id="new-comment-form" method="POST">
-                    <input type="text" name="content" placeholder="type your comment here..." required>
-                    <input type="hidden" name="post" value="${ post._id }">
-                    <input type="submit" value="Add comment">
-                </form>
-    
-            <div class="post-comments-list">
-                <p>Comments</p>
-                <ul id="post-comments-${post._id}">
-                     
-                </ul>
-            </div>
-        </div>
+        
     </li>`)
     }
 
