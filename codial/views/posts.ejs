@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/css/post.css">
+
+<div class="container">
+    <div class="row" style="padding-top: 120px; padding-bottom:100px;">
+         <div class="col-lg-4 col-sm-4 col-xs-12">
+
+            <section id="user-friends" style="padding-top: 90px;">
+                <h4>Friends</h4>
+                <% for(u of all_users){ %>
+                    <p>
+                        <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
+                    </p>
+                <% } %>
+            </section>
+
+        </div>
+        <div class="col-lg-8 col-sm-8 col-xs-12" id="feed-posts">
+            <div id="posts-list-container">
+                <ul>
+                    <% for(post of posts){ %>
+        
+                        <%- include('_post') -%>
+        
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/home_posts.js"></script>
+
+<script src="/js/home_posts.js"></script>
+

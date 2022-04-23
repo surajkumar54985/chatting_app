@@ -1,0 +1,16 @@
+#post {
+  margin-top: -2.25rem;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  background-color: #724170;
+}
+
+#post #feed-posts {
+  height: auto;
+}
+
+#post #feed-posts #posts-list-container {
+  font-size: xx-large;
+  font-weight: 800;
+}

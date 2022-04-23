@@ -1,0 +1,95 @@
+<!-- <header id="head">
+    Page header
+    <ul>
+        <% if(locals.user) {%>
+            <li>
+                <%=user.name %>
+            </li>
+            <li>
+                <a href="/" style="color: rgb(219, 132, 19)">Home</a>
+            </li>
+            <li>
+                <a href="/users/profile" style="color: rgb(219, 132, 19);"> Profile </a>
+            </li>
+            <li>
+                <a href="/posts/posts" style="color: rgb(219, 132, 19);"> Posts </a>
+            </li>
+            <li>
+                <a href="/users/sign-out" style="color: rgb(219, 132, 19);">Sign Out</a>
+            </li>
+        <% } else{ %>
+            <li>
+                <a href="/users/sign-in">Sign In</a>
+            </li>
+            <li>
+                <a href="/users/sign-up">Sign Up</a>
+            </li>
+        <% } %>
+    </ul>
+</header> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <title>header</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="head" style="position: fixed;
+right: 0;
+top: 0;
+left: 0;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+
+
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <% if(locals.user) {%>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/users/profile">Profile</a>
+            </li>
+        <% } else{ %>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/users/sign-in">Sign In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/users/sign-up">Sign Up</a>
+            </li>
+        <% } %>
+
+       
+      </ul>
+
+
+
+      <form class="d-flex">
+          
+        <% if(locals.user) {%>
+            <button type="submit">
+                <a class="nav-item nav-link active" style="color: black;" aria-current="page" href="/users/sign-out">Sign Out</a>
+            </button>
+        <% } %>
+      </form>
+    </div>
+  </div>
+</nav>
+</body>
+</html>

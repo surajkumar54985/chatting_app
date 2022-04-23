@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/user_profile.css">
+div
+<h1>
+    Codeial / Profile Page
+</h1>
+<div style="text-align: center;">
+    <img src="<%= user.avatar %>" alt="<%= user.name %>" width="100">
+
+    <p>Name: <%= user.name %></p>
+    <p>Email: <%= user.email %></p>
+
+    <form action="/users/update/<%= user.id %>" enctype="multipart/form-data" method="POST">
+        <p> Update profile </p>
+        <input type="text" name="name" placeholder="Your Name" value="<%= user.name %>" required>
+        <input type="email" name="email" placeholder="Your New email id" value="<%= user.email %>" required>
+
+        <input type="file" name="avatar" placeholder="profile-picture" >
+        <input type="submit" value="Update">
+    </form>
+
+    <p>
+        <form action="/users/sign-out">
+            <input type="submit" value="logOut">
+            
+        </form>
+    </p>
+</div>

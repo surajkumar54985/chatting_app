@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/comment.css">
+
+<div id="post-comment">
+    <li id="post-<%= post._id %>" style="display:inherit">
+        <p>
+            <% if(locals.user && locals.user.id == post.user.id){ %>
+            <small>
+                <a class="delete-post-button" href="/posts/destroy/<%= post.id %>">X</a>
+            </small>
+            <% } %>
+            <%= post.content %>
+        </p>
+    </li>
+</div>
+<!-- <div style="border-top: 1px solid #c4b4b4;"></div> -->
+
+
+<script src="/js/home_comments.js"></script>

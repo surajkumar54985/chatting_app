@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/user_profile.css">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8" style="text-align: center;">
+            <h1>
+                Codeial / Profile Page
+            </h1>
+            
+            <% if(profile_user.id == user.id){ %>
+                <p>Name: <%= user.name %></p>
+                <p>Email: <%= user.email %></p>
+            
+                <img src="<%= profile_user.avatar %>" alt="<%= profile_user.name %>" width="100">
+            
+                <p> Update profile </p>
+                <form action="/users/update/<%= profile_user.id %>" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" value="<%= profile_user.name %>" required>
+                    <input type="email" name="email" placeholder="Your New email id" value="<%= profile_user.email %>" required>
+                    <input type="submit" value="Update">
+                </form>
+            
+                <p>
+                    <form action="/users/sign-out">
+                        <input type="submit" value="logOut">
+                        
+                    </form>
+                </p>
+            <% } else {%>
+                <p>Name: <%= profile_user.name %></p>
+                <p>Email: <%= profile_user.email %></p>
+                <img src="<%= profile_user.avatar %>" alt="<%= profile_user.name %>" width="100">
+            <% } %>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+

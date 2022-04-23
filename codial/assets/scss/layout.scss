@@ -1,0 +1,28 @@
+body{
+    width: 100%;
+    height: 15rem;
+    margin-top: 25rem;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: bold;
+    margin: 0;
+    text-align: center; 
+}
+
+#foot {
+    margin-top: 30rem;
+    width: 100%;
+    height: auto;
+    background-color: rgb(9, 221, 150);
+}
+
+#head {
+    width: 100%;
+    height: auto;
+    background-color: blueviolet;
+}
+li {
+    display: inline;
+    text-decoration: none;
+    margin: 4px 16px 16px 4px;
+}
