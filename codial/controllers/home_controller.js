@@ -40,22 +40,30 @@ module.exports.home = async function(req,res){
 
         let users = await User.find({}).populate('user');
 
-        let curr_user = User.findById(req.params.id , function(err,user){
-            return res.render('profile_user',{
+
+        // let curr_user = User.findById(req.params.id , function(err,user){
+        //     return res.render('home',{
+        //         title: 'User Profile',
+        //         user: user
+        //     });
+        // });
+
+        let curr_user = User.findById(req.params.id , function(err,profile_user){
+            return res.render('home',{
                 title: 'User Profile',
-                profile_user: user
+                profile_user: profile_user
             });
         });
 
-        // console.log(curr_user);
+
 
         return res.render('home', {
             title: "codial|home",
             posts: posts,
             all_users: users,
-            curr_user: curr_user
+            curr_user: curr_user.schema.statics.avatarPath
         });
-    }catch(err){
+    }catch(err) {
         console.log('Error',err);
         return;
     }
